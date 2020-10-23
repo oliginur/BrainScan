@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28DE84F6-D85E-4192-8F4B-B3835BFF5435}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BrainScan</RootNamespace>
+    <AssemblyName>BrainScan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasureModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrainScan_TopBar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrainScan_TopBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_connected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_disconnected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_con.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_discon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direction_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direction_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_downside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_upside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up_10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleBar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn1_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn1_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn2_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn2_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn3_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn3_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn4_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn4_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn5_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn5_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn6_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn6_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn7_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn7_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn8_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn8_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn9_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn9_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn10_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn10_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn11_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn11_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn12_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn12_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn13_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn13_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left_10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_10px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
